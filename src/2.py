@@ -7,8 +7,33 @@ def hello(name = 'Robert'):
     def welcome():
         return "\t This welcome() inside hello"
     
-    print(greet())
-    print(welcome())
-    print('This is the end of the hello function')
+    print("I am going to return a function!")
+    if name == 'Robert':
+        return greet
+    else:
+        return welcome
     
-hello()
+a = hello('Robert')
+print(a())
+
+def cool():
+    
+    def superCool():
+        return 'I am very cool!'
+    
+    return superCool
+
+someFunc = cool()
+
+
+print(someFunc())
+
+
+def test():
+    return 'Hi Robert!'
+
+def other(someDefFunc):
+    print('Other code runs here!')
+    print(someDefFunc())
+    
+other(test)
